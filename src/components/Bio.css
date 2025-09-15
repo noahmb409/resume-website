@@ -1,0 +1,37 @@
+.linkedin-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.linkedin-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary);
+}
+
+.linkedin-link:hover {
+  background: transparent;
+  color: var(--primary);
+}
+
+.LI-profile-badge {
+  margin-top: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Dark theme styles for LinkedIn badge iframe */
+.LI-badge-container {
+  background-color: var(--card-bg) !important;
+  border-radius: 8px;
+  overflow: hidden;
+}

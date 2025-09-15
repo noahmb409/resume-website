@@ -5,14 +5,14 @@ const projects = [
     title: 'Project One',
     description: 'A cool project about X.',
     technologies: ['React', 'Vite', 'CSS'],
-    github: 'https://github.com/noahm/project-one',
+    github: 'https://github.com/noahmb409/resume-website',
     screenshot: '', // Add image path or demo link
   },
   {
     title: 'Project Two',
     description: 'Another awesome repo.',
     technologies: ['Node.js', 'Express'],
-    github: 'https://github.com/noahm/project-two',
+    github: 'https://github.com/noahmb409/cosc470',
     screenshot: '',
   },
   {
