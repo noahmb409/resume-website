@@ -5,25 +5,30 @@ import './Navbar.css';
 export default function Navbar() {
   const location = useLocation();
 
+  const getActiveClass = (path) => {
+    if (path === '/' && location.hash === '') return 'active';
+    return location.hash === `#${path}` ? 'active' : '';
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
         <Link to="/">Noah's Portfolio</Link>
       </div>
       <div className="nav-links">
-        <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
+        <Link to="/" className={getActiveClass('/')}>
           Home
         </Link>
-        <Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>
+        <Link to="/projects" className={getActiveClass('/projects')}>
           Projects
         </Link>
-        <Link to="/bio" className={location.pathname === '/bio' ? 'active' : ''}>
+        <Link to="/bio" className={getActiveClass('/bio')}>
           Bio
         </Link>
-        <Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>
+        <Link to="/resume" className={getActiveClass('/resume')}>
           Resume
         </Link>
-        <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
+        <Link to="/contact" className={getActiveClass('/contact')}>
           Contact
         </Link>
       </div>

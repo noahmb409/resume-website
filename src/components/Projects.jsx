@@ -3,22 +3,22 @@ import React from 'react';
 const projects = [
   {
     title: 'Project One',
-    description: 'A cool project about X.',
-    technologies: ['React', 'Vite', 'CSS'],
+    description: 'The repo for this website.',
+    technologies: ['React', 'Vite', 'CSS', 'JavaScript'],
     github: 'https://github.com/noahmb409/resume-website',
     screenshot: '', // Add image path or demo link
   },
   {
     title: 'Project Two',
-    description: 'Another awesome repo.',
-    technologies: ['Node.js', 'Express'],
+    description: 'The repo for some AI experiments done in AI class.',
+    technologies: ['Python', 'JSON'],
     github: 'https://github.com/noahmb409/cosc470',
     screenshot: '',
   },
   {
     title: 'Project Three',
-    description: 'A third project with impact.',
-    technologies: ['Python', 'Flask'],
+    description: 'The repo from my advanced java class.',
+    technologies: ['Java', 'Superclasses', 'Inheritance hierarchy'],
     github: 'https://github.com/noahmb409/COSC310',
     screenshot: '',
   },
