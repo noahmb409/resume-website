@@ -19,7 +19,7 @@ const projects = [
     title: 'Project Three',
     description: 'A third project with impact.',
     technologies: ['Python', 'Flask'],
-    github: 'https://github.com/noahm/project-three',
+    github: 'https://github.com/noahmb409/COSC310',
     screenshot: '',
   },
 ];
