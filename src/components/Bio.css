@@ -1,14 +1,109 @@
-.linkedin-section {
-  margin-top: 2rem;
+.bio {
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 60px);
+  background: linear-gradient(
+    135deg,
+    var(--background) 0%,
+    var(--background-alt) 100%
+  );
+}
+
+.bio-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bio h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, var(--primary) 30%, var(--primary-light) 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bio-text {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.bio-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bio-section:hover {
+  transform: translateY(-5px);
+}
+
+.bio-section h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.bio-section p {
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+.skills-container {
+  display: block;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skills-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.skill {
+  background: var(--background);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center; ;
+  font-weight: 500;
+  color: var(--text);
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-light);
+  background: var(--primary);
+  color: white;
+}
+
+.bio-social {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
-  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .linkedin-link {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   background: var(--primary);
   color: white;
   border-radius: 8px;
@@ -16,22 +111,51 @@
   font-weight: 500;
   transition: all 0.3s ease;
   border: 2px solid var(--primary);
+  min-width: 200px;
+  text-align: center;
 }
 
 .linkedin-link:hover {
   background: transparent;
   color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .LI-profile-badge {
-  margin-top: 1rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark theme styles for LinkedIn badge iframe */
-.LI-badge-container {
-  background-color: var(--card-bg) !important;
-  border-radius: 8px;
-  overflow: hidden;
+@media (max-width: 968px) {
+  .bio h2 {
+    font-size: 2rem;
+  }
+  
+  .bio-section,
+  .bio-social {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bio {
+    padding: 2rem 1rem;
+  }
+  
+  .bio-section {
+    padding: 1.5rem;
+  }
+  
+  .skills-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .skill {
+    padding: 0.6rem 1rem;
+  }
 }

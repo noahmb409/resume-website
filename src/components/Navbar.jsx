@@ -6,8 +6,11 @@ export default function Navbar() {
   const location = useLocation();
 
   const getActiveClass = (path) => {
-    if (path === '/' && location.hash === '') return 'active';
-    return location.hash === `#${path}` ? 'active' : '';
+    const currentPath = location.pathname.replace(/^\//, '');
+    if (path === '/') {
+      return currentPath === '' ? 'active' : '';
+    }
+    return currentPath === path ? 'active' : '';
   };
 
   return (
@@ -19,16 +22,16 @@ export default function Navbar() {
         <Link to="/" className={getActiveClass('/')}>
           Home
         </Link>
-        <Link to="/projects" className={getActiveClass('/projects')}>
+        <Link to="projects" className={getActiveClass('projects')}>
           Projects
         </Link>
-        <Link to="/bio" className={getActiveClass('/bio')}>
+        <Link to="bio" className={getActiveClass('bio')}>
           Bio
         </Link>
-        <Link to="/resume" className={getActiveClass('/resume')}>
+        <Link to="resume" className={getActiveClass('resume')}>
           Resume
         </Link>
-        <Link to="/contact" className={getActiveClass('/contact')}>
+        <Link to="contact" className={getActiveClass('contact')}>
           Contact
         </Link>
       </div>
